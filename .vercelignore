@@ -1,7 +1,7 @@
 .git
 .vercel
-assets
-qa
+/assets/
+/qa/
 *.zip
 README.md
 check-preview.mjs

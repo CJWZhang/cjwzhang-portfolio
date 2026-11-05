@@ -1,0 +1,59 @@
+/* Water Lilies details fade into the page edges, never into a hard banner.
+   Public-domain source: assets/monet-credit.txt. Photographs are unchanged. */
+:root {
+  --paper: #faf9f6;
+  --ink: #2d2d2b;
+  --muted: #62625d;
+  --line: #deded8;
+  --sage: #efeee9;
+  --lilac: #efeee9;
+  --peach: #efeee9;
+  --blue: #efeee9;
+  --accent: #41413d;
+}
+body {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse 65% 750px at 0% 0%, #e3ebe5 0%, transparent 85%),
+    radial-gradient(ellipse 60% 800px at 100% 5%, #e9e5ef 0%, transparent 85%),
+    radial-gradient(ellipse 65% 1000px at 0% 52%, #e4edf0 0%, transparent 85%),
+    radial-gradient(ellipse 55% 800px at 100% 85%, #e7ecdf 0%, transparent 85%);
+  background-repeat: no-repeat;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("assets/monet-water-lilies.jpg") center 78% / cover no-repeat;
+  opacity: .20;
+  -webkit-mask-image: linear-gradient(to right, #000, #0006 7%, transparent 22%, transparent 78%, #0006 93%, #000);
+  mask-image: linear-gradient(to right, #000, #0006 7%, transparent 22%, transparent 78%, #0006 93%, #000);
+}
+/* Smaller screens retain a pale painted edge without competing with text. */
+@media (max-width: 800px) {
+  body::before {
+    opacity: .10;
+    -webkit-mask-image: linear-gradient(to right, #000, transparent 19%, transparent 81%, #000);
+    mask-image: linear-gradient(to right, #000, transparent 19%, transparent 81%, #000);
+  }
+}
+.mit-logo-frame { width: 112px; height: 34px; }
+.affiliation-branded { gap: 6px; }
+.wordmark::after { background: #90908a; }
+.portrait-frame { background: transparent; }
+.photo-button:hover img { filter: none; }
+.small-project p, .case-content p, .case-content li { color: var(--muted); }
+.text-link { border-bottom-color: #aaa9a2; }
+.note { border-left-color: #b7b6ae; }
+a:focus-visible, button:focus-visible, summary:focus-visible, video:focus-visible {
+  outline-color: #62625d;
+}
+::selection { background: #deded6; color: #2d2d2b; }
+@media print {
+  body { background: white; }
+  body::before { display: none; }
+}

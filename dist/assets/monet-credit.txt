@@ -1,0 +1,6 @@
+Decorative artwork: Claude Monet, Water Lilies, 1906.
+Collection: Art Institute of Chicago, accession 1933.1157.
+Artwork and faithful reproduction: public domain / CC0.
+Source: https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1933.1157_-_Art_Institute_of_Chicago.jpg
+Museum: https://www.artic.edu/artworks/16568/water-lilies
+Used as decorative CSS crops; no changes to portfolio photographs.
