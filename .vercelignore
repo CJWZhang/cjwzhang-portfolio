@@ -1,0 +1,7 @@
+.git
+.vercel
+assets
+qa
+*.zip
+README.md
+check-preview.mjs

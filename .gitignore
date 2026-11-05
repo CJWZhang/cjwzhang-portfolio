@@ -1,0 +1,13 @@
+# Only deployable site files and local development helpers belong in this repository.
+/*
+!/.gitignore
+!/.vercelignore
+!/vercel.json
+!/package.json
+!/server.mjs
+!/check-static.mjs
+!/DEPLOY.md
+!/dist/
+.DS_Store
+.env
+.env.*
